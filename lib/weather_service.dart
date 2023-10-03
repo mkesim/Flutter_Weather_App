@@ -39,7 +39,7 @@ class WeatherService {
     try {
       // Try to fetch data from OpenWeatherMap API first
       final responseOpenWeather = await http.get(
-        Uri.parse('http://api.openweathermap.org/data/2.5/weather?lat=${position.latitude}&lon=${position.longitude}&appid=b4cf0b24fc6e2d57748116bc649f1fb8 &units=metric'),
+        Uri.parse('http://api.openweathermap.org/data/2.5/weather?lat=${position.latitude}&lon=${position.longitude}&appid= &units=metric'),
       );
 
       if (responseOpenWeather.statusCode == 200) {
@@ -50,7 +50,7 @@ class WeatherService {
     } catch (e) {
       // If fetching data from OpenWeatherMap API fails, fetch data from WeatherAPI.com API
       final responseWeatherAPI = await http.get(
-        Uri.parse('https://weatherapi-com.p.rapidapi.com/current.json?key=0a8eacfdfemshd05e76bd1238dfap13db1djsnec86ecf6728f&q=${position.latitude},${position.longitude}'),
+        Uri.parse('https://weatherapi-com.p.rapidapi.com/current.json?key==${position.latitude},${position.longitude}'),
         headers: {
           "X-Rapidapi-Key": "0a8eacfdfemshd05e76bd1238dfap13db1djsnec86ecf6728f",
           "X-Rapidapi-Host": "weatherapi-com.p.rapidapi.com",
