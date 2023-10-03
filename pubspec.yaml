@@ -1,0 +1,20 @@
+name: havadurumu
+description: A Flutter app for deneme
+
+# Set the minimum Flutter SDK version
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^0.13.3
+  geolocator: ^7.6.2
+  weather_icons: 3.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+# Add any additional configuration options here, if needed
